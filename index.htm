@@ -12,7 +12,14 @@
     <div class="weather-dashboard">
         <h1>Weather Dashboard</h1>
         <div class="input-section">
-            <input type="text" id="city" placeholder="Enter city name" required>
+            <div>
+                <label for="api-key">API Key</label>
+                <input type="password" id="api-key" placeholder="API Key..." required>
+            </div>
+            <div>
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="Enter city name..." required>
+            </div>
             <button id="getWeather">Get Weather</button>
         </div>
         <div id="weatherResult" class="weather-result"></div>
