@@ -1,0 +1,148 @@
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .glass-rectangle {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+
+  .header-middle ul {
+    gap: var(--gap-sm);
+  }
+
+  .dashboard-main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: var(--spacing-md);
+  }
+
+  .main-left,
+  .main-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .wind-status-chart {
+    align-items: center;
+  }
+
+  .forecast-section {
+    padding: var(--spacing-md);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 768px) {
+  .app-name {
+    font-size: var(--font-size-xl);
+  }
+
+  .header-middle a {
+    font-size: var(--font-size-md);
+  }
+
+  .date-time {
+    font-size: var(--font-size-sm);
+  }
+
+  .user-profile-button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+
+  .user-avatar {
+    width: var(--user-avatar-size-mobile);
+    height: var(--user-avatar-size-mobile);
+  }
+
+  .weather-description {
+    font-size: var(--font-size-weather-description-mobile);
+  }
+
+  .temperature .current-temp {
+    font-size: var(--font-size-current-temp-mobile);
+  }
+
+  .temperature .feels-like {
+    font-size: var(--font-size-feels-like-mobile);
+  }
+
+  .forecast-item {
+    flex: 0 0 var(--forecast-item-width-mobile);
+    padding: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-rectangle {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .dashboard-header {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .app-name {
+    font-size: var(--font-size-app-name-mobile);
+  }
+
+  .header-middle ul {
+    gap: var(--spacing-sm);
+  }
+
+  .header-middle a {
+    font-size: var(--font-size-header-link-mobile);
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: flex-end;
+  }
+
+  .dashboard-main {
+    padding: var(--spacing-sm);
+  }
+
+  .current-temp {
+    font-size: var(--font-size-current-temp-xsm) !important;
+  }
+
+  .feels-like {
+    font-size: var(--font-size-feels-like-xsm) !important;
+  }
+
+  .wind-status-chart,
+  .time-of-day {
+    margin-top: var(--spacing-md);
+  }
+
+  .forecast-list {
+    gap: var(--spacing-sm);
+  }
+
+  .forecast-item {
+    flex: 0 0 var(--forecast-item-width-xsm);
+  }
+
+  .site-footer {
+    padding: var(--spacing-md);
+  }
+}
