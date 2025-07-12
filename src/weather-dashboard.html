@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherDashboard - Kamil Wozniak</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon_32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<div class="dashboard-container cloudy">
+  <div class="glass-rectangle cloudy">
+    <header class="dashboard-header">
+      <div class="header-left">
+        <h1 class="app-name">WeatherDash</h1>
+      </div>
+      <nav class="header-middle">
+        <ul>
+          <li><a href="./weather-dashboard.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
+          <li><a href="#" aria-label="Search City"><i class="fas fa-search"></i></a></li>
+          <li><a href="#" aria-label="Map"><i class="fas fa-map-marked-alt"></i></a></li>
+          <li><a href="#" aria-label="Notifications"><i class="fas fa-bell"></i></a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <span class="date-time" id="currentDateTime">July 11, 2025 | 14:40 PM</span>
+        <div class="user-menu">
+          <button class="user-profile-button">
+            <img src="./assets/images/user-avatar.jpg" alt="User Avatar" class="user-avatar">
+            <span class="user-info">
+              <span class="user-name">John Doe</span>
+              <span class="user-role">Administrator</span>
+            </span>
+            <i class="fas fa-chevron-down arrow-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <div class="main-left">
+        <p class="weather-description">Cloudy</p>
+        <div class="temperature">
+          <p class="current-temp">22°C</p>
+          <p class="feels-like">Feels like 20°C</p>
+        </div>
+      </div>
+      <div class="main-center">
+      </div>
+      <div class="main-right">
+        <div class="wind-status-chart">
+          <h3>Wind Status</h3>
+          <div class="chart-placeholder">
+            <p>Wind: 15 km/h NE</p>
+          </div>
+        </div>
+        <div class="time-of-day">
+          <p>Sunrise: 05:30 AM</p>
+          <p>Sunset: 09:15 PM</p>
+        </div>
+      </div>
+    </main>
+
+    <section class="forecast-section">
+      <h2>5-Day Forecast</h2>
+      <div class="forecast-list">
+        <div class="forecast-item">
+          <p class="forecast-day">Today</p>
+          <i class="fas fa-sun forecast-icon"></i>
+          <p class="forecast-temp">24°C</p>
+        </div>
+        <div class="forecast-item">
+          <p class="forecast-day">Sat</p>
+          <i class="fas fa-cloud-sun forecast-icon"></i>
+          <p class="forecast-temp">20°C</p>
+        </div>
+        <div class="forecast-item">
+          <p class="forecast-day">Sun</p>
+          <i class="fas fa-cloud-rain forecast-icon"></i>
+          <p class="forecast-temp">18°C</p>
+        </div>
+        <div class="forecast-item">
+          <p class="forecast-day">Mon</p>
+          <i class="fas fa-cloud forecast-icon"></i>
+          <p class="forecast-temp">19°C</p>
+        </div>
+        <div class="forecast-item">
+          <p class="forecast-day">Tue</p>
+          <i class="fas fa-snowflake forecast-icon"></i>
+          <p class="forecast-temp">5°C</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 WeatherDash by Kamil Wozniak. All rights reserved.</p>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="visit-counter">
+      <p>Visits: <span id="visitCount">12345</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
+

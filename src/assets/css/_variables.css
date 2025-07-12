@@ -1,0 +1,88 @@
+:root {
+  /* Colors */
+  --chart-placeholder-bg: #FFFFFF1A;
+  --dark-overlay: #00000066;
+  --dropdown-bg: rgba(255, 255, 255, 0.95);
+  --dropdown-hover-bg: #F1F1F1;
+  --dropdown-item-color: #333;
+  --dropdown-shadow-color: #00000033;
+  --footer-background: #1A1A1A;
+  --footer-text-color: rgba(255, 255, 255, 0.7);
+  --glass-background: #FFFFFF33;
+  --glass-border-color: #FFFFFF4D;
+  --glass-shadow-color: #0000005E;
+  --gradient-end: #9FACE6;
+  --gradient-start: #74ebd5;
+  --primary-color: #007BFF;
+  --scrollbar-thumb-bg: #FFFFFF4D;
+  --scrollbar-track-bg: #FFFFFF1A;
+  --text-color: #FFF;
+  --user-profile-button-bg: #FFFFFF33;
+  --user-profile-button-hover-bg: #FFFFFF4D;
+
+  /* Font Sizes */
+  --font-size-base: 1em; /* 16px */
+  --font-size-sm: 0.8em; /* ~12.8px */
+  --font-size-md: 1.1em; /* ~17.6px */
+  --font-size-lg: 1.3em; /* ~20.8px */
+  --font-size-xl: 1.5em; /* ~24px */
+  --font-size-xxl: 1.8em; /* ~28.8px */
+  --font-size-weather-description: 2.5em; /* ~40px */
+  --font-size-current-temp: 5em; /* ~80px */
+  --font-size-feels-like: 1.5em; /* ~24px */
+  --font-size-chart-title: 1.5em; /* ~24px */
+  --font-size-forecast-temp: 1.3em; /* ~20.8px */
+  --font-size-forecast-icon: 2em; /* ~32px */
+  --font-size-app-name-mobile: 1.3em; /* ~20.8px */
+  --font-size-header-link-mobile: 1em; /* ~16px */
+  --font-size-date-time-mobile: 0.9em; /* ~14.4px */
+  --font-size-profile-button-mobile: 0.9em; /* ~14.4px */
+  --font-size-weather-description-mobile: 2em; /* ~32px */
+  --font-size-current-temp-mobile: 4em; /* ~64px */
+  --font-size-feels-like-mobile: 1.2em; /* ~19.2px */
+  --font-size-current-temp-xsm: 3em; /* ~48px */
+  --font-size-feels-like-xsm: 1em; /* ~16px */
+
+
+  /* Spacing */
+  --spacing-xxs: 5px;
+  --spacing-xs: 8px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 25px;
+  --spacing-xxl: 30px;
+  --padding-container: 20px;
+  --padding-header: 20px 30px;
+  --padding-main: 20px 30px;
+  --padding-forecast: 20px 30px 30px;
+  --padding-footer: 20px 50px;
+  --gap-md: 20px;
+  --gap-lg: 25px;
+  --gap-sm: 15px;
+  --gap-xs: 10px;
+  --margin-sm: 5px;
+  --margin-md: 10px;
+  --margin-lg: 20px;
+  --margin-xl: 10px;
+  --user-avatar-size: 35px;
+  --user-avatar-size-mobile: 30px;
+  --chart-placeholder-width: 200px;
+  --chart-placeholder-height: 150px;
+  --forecast-item-width: 120px;
+  --forecast-item-width-mobile: 100px;
+  --forecast-item-width-xsm: 90px;
+  --footer-max-width: 1200px;
+  --dropdown-min-width: 160px;
+  --scrollbar-height: 8px;
+
+
+  /* Borders & Shadows */
+  --border-radius: 15px;
+  --border-radius-sm: 10px;
+  --border-radius-pill: 50px;
+  --border-radius-circle: 50%;
+  --glass-border: 1px solid var(--glass-border-color);
+  --glass-box-shadow: 0 8px 32px 0 var(--glass-shadow-color);
+  --dropdown-box-shadow: 0px 8px 16px 0px var(--dropdown-shadow-color);
+}
