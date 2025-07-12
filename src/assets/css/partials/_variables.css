@@ -1,13 +1,13 @@
 :root {
   /* Colors */
   --chart-placeholder-bg: #FFFFFF1A;
-  --dark-overlay: #00000066;
-  --dropdown-bg: rgba(255, 255, 255, 0.95);
+  --dark-overlay: #0006;
+  --dropdown-bg: #FFFFFFF2;
   --dropdown-hover-bg: #F1F1F1;
   --dropdown-item-color: #333;
   --dropdown-shadow-color: #00000033;
   --footer-background: #1A1A1A;
-  --footer-text-color: rgba(255, 255, 255, 0.7);
+  --footer-text-color: #FFFFFFB2;
   --glass-background: #FFFFFF33;
   --glass-border-color: #FFFFFF4D;
   --glass-shadow-color: #0000005E;
