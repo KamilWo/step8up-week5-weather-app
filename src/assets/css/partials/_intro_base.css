@@ -1,0 +1,73 @@
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Component Styles */
+.intro-container {
+  background-color: var(--color-white);
+  padding: var(--spacing-10);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-2xl);
+  max-width: 800px;
+  width: 100%;
+  margin: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-10);
+
+  /* Animation */
+  opacity: 0;
+  animation: fadeInSlideUp 1.2s ease-out 0.3s forwards;
+}
+
+/* A dedicated class for the text content makes styling more robust */
+.intro-content {
+  text-align: center;
+}
+
+.intro-image {
+  width: 256px;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-xl);
+  object-fit: cover;
+
+  /* Animation */
+  opacity: 0;
+  animation: scaleIn 1s ease-out forwards;
+}
+
+/* Utility & Button Styles */
+.text-blue-600 {
+  color: var(--color-primary);
+}
+
+.btn-custom {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-duration) var(--transition-timing),
+    color var(--transition-duration) var(--transition-timing);
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}

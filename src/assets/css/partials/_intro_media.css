@@ -1,0 +1,18 @@
+@media (width > 768px) {
+  .intro-container {
+    flex-direction: row;
+    padding: var(--spacing-12);
+    gap: var(--spacing-12);
+    align-items: center;
+  }
+
+  /* This removes the need for `!important` and fragile child selectors */
+  .intro-content {
+    text-align: left;
+  }
+
+  .intro-image {
+    width: 320px;
+    flex-shrink: 0;
+  }
+}
