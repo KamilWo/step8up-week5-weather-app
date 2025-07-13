@@ -61,57 +61,33 @@
 
     <main class="dashboard-main">
       <div class="main-left">
-        <p class="weather-description">Cloudy</p>
+        <h2 id="city-name" class="text-4xl font-bold mb-2">Search for a city</h2>
+        <p class="weather-description">--</p>
         <div class="temperature">
-          <p class="current-temp">22°C</p>
-          <p class="feels-like">Feels like 20°C</p>
+          <p class="current-temp">--°C</p>
+          <p class="feels-like">Feels like --°C</p>
         </div>
       </div>
       <div class="main-center">
+        <!-- This space is intentionally empty for the background image -->
       </div>
       <div class="main-right">
         <div class="wind-status-chart">
           <h3>Wind Status</h3>
           <div class="chart-placeholder">
-            <p>Wind: 15 km/h NE</p>
+            <p id="wind-status">--</p>
           </div>
         </div>
         <div class="time-of-day">
-          <p>Sunrise: 05:30 AM</p>
-          <p>Sunset: 09:15 PM</p>
+          <p id="sunrise-time">Sunrise: --:--</p>
+          <p id="sunset-time">Sunset: --:--</p>
         </div>
       </div>
     </main>
 
     <section class="forecast-section">
       <h2>5-Day Forecast</h2>
-      <div class="forecast-list">
-        <div class="forecast-item">
-          <p class="forecast-day">Today</p>
-          <i class="fas fa-sun forecast-icon"></i>
-          <p class="forecast-temp">24°C</p>
-        </div>
-        <div class="forecast-item">
-          <p class="forecast-day">Sat</p>
-          <i class="fas fa-cloud-sun forecast-icon"></i>
-          <p class="forecast-temp">20°C</p>
-        </div>
-        <div class="forecast-item">
-          <p class="forecast-day">Sun</p>
-          <i class="fas fa-cloud-rain forecast-icon"></i>
-          <p class="forecast-temp">18°C</p>
-        </div>
-        <div class="forecast-item">
-          <p class="forecast-day">Mon</p>
-          <i class="fas fa-cloud forecast-icon"></i>
-          <p class="forecast-temp">19°C</p>
-        </div>
-        <div class="forecast-item">
-          <p class="forecast-day">Tue</p>
-          <i class="fas fa-snowflake forecast-icon"></i>
-          <p class="forecast-temp">5°C</p>
-        </div>
-      </div>
+      <div class="forecast-list" id="forecast-list"></div>
     </section>
   </div>
 </div>
@@ -133,17 +109,18 @@
   </div>
 </footer>
 
-<div id="search-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50"
+<div id="search-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm"
      role="dialog" aria-modal="true" aria-labelledby="modal-title">
-  <!-- Modal content -->
-  <div id="modal-panel" class="w-full max-w-md transform rounded-lg bg-white p-6 shadow-xl transition-all">
+  <!-- Modal panel -->
+  <div id="modal-panel"
+       class="w-full max-w-md transform rounded-2xl bg-gray-800/50 backdrop-blur-lg border border-white/20 p-6 text-white shadow-xl transition-all">
     <!-- Modal Header -->
     <div class="flex items-start justify-between">
-      <h3 class="text-lg font-semibold leading-6 text-gray-900" id="modal-title">
-        Your Location
+      <h3 class="text-lg font-semibold leading-6" id="modal-title">
+        Search for a City
       </h3>
       <button type="button" id="modal-close-button"
-              class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+              class="rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
         <span class="sr-only">Close</span>
         <i class="fas fa-times h-6 w-6" aria-hidden="true"></i>
       </button>
@@ -151,10 +128,10 @@
 
     <!-- Modal Body -->
     <div class="mt-4">
-      <label for="city-input" class="block text-sm font-medium text-gray-700">City Name</label>
+      <label for="city-input" class="block text-sm font-medium text-gray-300">City Name</label>
       <div class="mt-1">
         <input type="text" name="city" id="city-input"
-               class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+               class="block w-full rounded-md border-gray-600 bg-black/20 p-3 text-white placeholder-gray-400 shadow-sm focus:border-cyan-500 focus:ring-cyan-500 sm:text-sm transition"
                placeholder="e.g., London">
       </div>
     </div>
@@ -162,11 +139,11 @@
     <!-- Modal Footer -->
     <div class="mt-5 sm:mt-6 sm:flex sm:flex-row-reverse sm:gap-3">
       <button type="button" id="get-weather-button"
-              class="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto sm:text-sm">
+              class="inline-flex w-full justify-center rounded-md border border-transparent bg-cyan-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 sm:w-auto sm:text-sm transition">
         Check Weather
       </button>
       <button type="button" id="modal-cancel-button"
-              class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm">
+              class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-500 bg-white/10 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm transition">
         Cancel
       </button>
     </div>
@@ -174,6 +151,7 @@
 </div>
 
 <!-- Scripts -->
+<script src="./assets/js/script.js"></script>
 <script src="./assets/js/weather-dashboard.js"></script>
 </body>
 </html>
