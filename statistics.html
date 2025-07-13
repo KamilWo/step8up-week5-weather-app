@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>WeatherDash - Statistics</title><link rel=icon type=image/png sizes=32x32 href=/step8up-week5-weather-app/favicon_32x32.b8b08889.png><link rel=icon type=image/x-icon href=/step8up-week5-weather-app/favicon.6f6f74ab.ico><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel=stylesheet><script src=https://cdn.tailwindcss.com></script><script src=https://cdn.jsdelivr.net/npm/chart.js></script><link rel=stylesheet href=/step8up-week5-weather-app/weather-dashboard.15468a02.css><body>
+<div class=dashboard-container>
+  <div class=glass-rectangle>
+    <header class=dashboard-header>
+      <div class=header-left>
+        <h1 class=app-name>WeatherDash</h1>
+      </div>
+      <nav class=header-middle>
+        <ul>
+          <li><a href=/step8up-week5-weather-app/weather-dashboard.html aria-label=Home><i class="fa-home fas"></i></a></li>
+          <li><a href=/step8up-week5-weather-app/statistics.html aria-label=Statistics><i class="fa-chart-line fas"></i></a></li>
+          <li><a href=# aria-label=Notifications><i class="fa-bell fas"></i></a></li>
+        </ul>
+      </nav>
+      <div class=header-right>
+        <span class=date-time id=current-date-time>Loading...</span>
+        <div class=user-menu>
+          <button class=user-profile-button type=button>
+            <img src=/step8up-week5-weather-app/user-avatar.d3abfc74.jpg alt="User Avatar" class=user-avatar>
+            <span class=user-info>
+              <span class=user-name>Kamil Wozniak</span>
+              <span class=user-role>Administrator</span>
+            </span>
+            <i class="arrow-down fa-chevron-down fas"></i>
+          </button>
+          <div class=dropdown-content>
+            <a href=#>Profile</a>
+            <a href=#>Settings</a>
+            <a href=#>Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main md:p-8 p-4 text-white">
+      
+      <div class="gap-6 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+
+        
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="font-semibold mb-4 text-lg">Temperature (°C) - Next 5 Days</h3>
+          <canvas id=temperatureChart></canvas>
+        </div>
+
+        
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="font-semibold mb-4 text-lg">Wind Speed (km/h)</h3>
+          <canvas id=windChart></canvas>
+        </div>
+
+        
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="font-semibold mb-4 text-lg">Precipitation Probability (%)</h3>
+          <canvas id=precipitationChart></canvas>
+        </div>
+
+        
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="font-semibold mb-4 text-lg">Moon Phase (Illumination)</h3>
+          <canvas id=moonPhaseChart></canvas>
+        </div>
+
+        
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="font-semibold mb-4 text-lg">Air Pressure (hPa)</h3>
+          <canvas id=pressureChart></canvas>
+        </div>
+
+        
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="font-semibold mb-4 text-lg">Humidity (%)</h3>
+          <canvas id=humidityChart></canvas>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<footer class=site-footer>
+  <div class=footer-content>
+    <p>© 2025 WeatherDash by Kamil Wozniak. All rights reserved.</p>
+    <nav class=footer-nav>
+      <ul>
+        <li><a href=#>Terms &amp; Conditions</a></li>
+        <li><a href=#>Privacy Policy</a></li>
+        <li><a href=/step8up-week5-weather-app/contact.html>Contact Us</a></li>
+        <li><a href=/step8up-week5-weather-app/about.html>About Us</a></li>
+      </ul>
+    </nav>
+    <div class=visit-counter>
+      <p>Visits: <span id=visitCount>12345</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src=/step8up-week5-weather-app/contact.ac7ee8ef.js></script>
+<script src=/step8up-week5-weather-app/statistics.6d6133ec.js></script>
+
+
