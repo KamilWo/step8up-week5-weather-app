@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>WeatherDashboard - User Profile</title><link rel=icon type=image/png sizes=32x32 href=/step8up-week5-weather-app/favicon_32x32.b8b08889.png><link rel=icon type=image/x-icon href=/step8up-week5-weather-app/favicon.6f6f74ab.ico><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel=stylesheet><script src=https://cdn.tailwindcss.com></script><link rel=stylesheet href=/step8up-week5-weather-app/weather-dashboard.b325ca73.css><body>
+<div class=dashboard-container>
+  <div class=glass-rectangle>
+    
+    <header class=dashboard-header>
+      <div class=header-left>
+        <h1 class=app-name>WeatherDash</h1>
+      </div>
+      <nav class=header-middle>
+        <ul>
+          <li><a href=/step8up-week5-weather-app/weather-dashboard.html aria-label=Home><i class="fa-home fas"></i></a></li>
+          <li><a href=/step8up-week5-weather-app/statistics.html aria-label=Statistics><i class="fa-chart-line fas"></i></a></li>
+          <li><a href=/step8up-week5-weather-app/notifications.html aria-label=Notifications><i class="fa-bell fas"></i></a></li>
+        </ul>
+      </nav>
+      <div class=header-right>
+        <span class=date-time id=current-date-time>Loading...</span>
+        <div class=user-menu>
+          <button class=user-profile-button type=button>
+            <img src=/step8up-week5-weather-app/user-avatar.d3abfc74.jpg alt="User Avatar" class=user-avatar>
+            <span class=user-info>
+              <span class=user-name>Kamil Wozniak</span>
+              <span class=user-role>Administrator</span>
+            </span>
+            <i class="arrow-down fa-chevron-down fas"></i>
+          </button>
+          <div class=dropdown-content>
+            <a href=/step8up-week5-weather-app/profile.html>Profile</a>
+            <a href=#>Settings</a>
+            <a href=#>Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <main class="main md:p-8 p-4 text-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-bold mb-8 text-3xl text-white">User Profile</h2>
+
+        <form id=profile-form class=space-y-12>
+  
+  <section>
+    <h3 class="border-b border-white/20 font-semibold mb-6 pb-2 text-white text-xl">Profile Information</h3>
+    <div class="gap-8 grid grid-cols-1 items-center md:grid-cols-3">
+      
+      <div class="flex flex-col items-center md:col-span-1">
+        <div id=avatar-preview class="bg-black/30 bg-center bg-cover h-32 mb-4 relative rounded-full w-32">
+          <label for=avatar-upload class="absolute bg-black/50 cursor-pointer flex hover:opacity-100 inset-0 items-center justify-center opacity-0 rounded-full text-sm text-white transition-opacity">
+            <i class="fa-camera fas mr-2"></i> Change
+          </label>
+        </div>
+        <input type=file id=avatar-upload name=avatar class=hidden accept=image/*>
+      </div>
+      
+      <div class="md:col-span-2 space-y-4">
+        <div>
+          <label for=username class="block font-medium mb-2 text-gray-300 text-sm">User Name</label>
+          <input id=username name=username value="Kamil Wozniak" class="bg-black/20 border border-gray-600 focus:border-cyan-500 focus:ring-cyan-500 p-3 placeholder-gray-400 rounded-lg text-white transition w-full">
+        </div>
+        <div>
+          <label for=email class="block font-medium mb-2 text-gray-300 text-sm">Email Address</label>
+          <input type=email id=email name=email value=kamil.wozniak@example.com class="bg-black/20 border border-gray-600 focus:border-cyan-500 focus:ring-cyan-500 p-3 placeholder-gray-400 rounded-lg text-white transition w-full">
+        </div>
+        <div>
+          <label for=email-confirm class="block font-medium mb-2 text-gray-300 text-sm">Confirm Email</label>
+          <input type=email id=email-confirm name=email-confirm value=kamil.wozniak@example.com class="bg-black/20 border border-gray-600 focus:border-cyan-500 focus:ring-cyan-500 p-3 placeholder-gray-400 rounded-lg text-white transition w-full">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section>
+    <h3 class="border-b border-white/20 font-semibold mb-6 pb-2 text-white text-xl">Change Password</h3>
+    <div class="max-w-md space-y-4">
+      <div>
+        <label for=current-password class="block font-medium mb-2 text-gray-300 text-sm">Current
+          Password</label>
+        <input type=password id=current-password name=current-password class="bg-black/20 border border-gray-600 focus:border-cyan-500 focus:ring-cyan-500 p-3 placeholder-gray-400 rounded-lg text-white transition w-full" placeholder=••••••••>
+      </div>
+      <div>
+        <label for=new-password class="block font-medium mb-2 text-gray-300 text-sm">New Password</label>
+        <input type=password id=new-password name=new-password class="bg-black/20 border border-gray-600 focus:border-cyan-500 focus:ring-cyan-500 p-3 placeholder-gray-400 rounded-lg text-white transition w-full" placeholder=••••••••>
+      </div>
+      <div>
+        <label for=new-password-confirm class="block font-medium mb-2 text-gray-300 text-sm">Confirm New
+          Password</label>
+        <input type=password id=new-password-confirm name=new-password-confirm class="bg-black/20 border border-gray-600 focus:border-cyan-500 focus:ring-cyan-500 p-3 placeholder-gray-400 rounded-lg text-white transition w-full" placeholder=••••••••>
+      </div>
+    </div>
+  </section>
+
+  
+  <section>
+    <h3 class="border-b border-white/20 font-semibold mb-4 pb-2 text-white text-xl">Notifications</h3>
+    <div class="flex items-center">
+      <input id=email-notifications name=email-notifications type=checkbox checked class="bg-black/20 border-gray-500 focus:ring-cyan-600 h-4 rounded text-cyan-500 w-4">
+      <label for=email-notifications class="font-medium ml-3 text-gray-300 text-sm">Enable email notifications
+        for weather alerts</label>
+    </div>
+  </section>
+
+  
+  <section class="border-t border-white/20 flex flex-col gap-4 items-center justify-between md:flex-row pt-8">
+    <div>
+      <button type=button id=delete-account-btn class="bg-red-600/80 font-semibold hover:bg-red-700/80 px-6 py-2 rounded-lg text-white transition-colors">
+        Delete Account
+      </button>
+    </div>
+    <div class="flex gap-4">
+      <button type=button class="bg-gray-500/80 font-semibold hover:bg-gray-600/80 px-6 py-2 rounded-lg text-white transition-colors">
+        Cancel
+      </button>
+      <button class="bg-cyan-600 font-semibold hover:bg-cyan-700 px-6 py-2 rounded-lg text-white transition-colors">
+        Save Changes
+      </button>
+    </div>
+  </section>
+</form>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+<footer class=site-footer>
+  <div class=footer-content>
+    <p>© 2025 WeatherDash by Kamil Wozniak. All rights reserved.</p>
+    <nav class=footer-nav>
+      <ul>
+        <li><a href=/step8up-week5-weather-app/terms.html>Terms &amp; Conditions</a></li>
+        <li><a href=/step8up-week5-weather-app/privacy.html>Privacy Policy</a></li>
+        <li><a href=/step8up-week5-weather-app/contact.html>Contact Us</a></li>
+        <li><a href=/step8up-week5-weather-app/about.html>About Us</a></li>
+      </ul>
+    </nav>
+    <div class=visit-counter>
+      Visits: <span id=visitCount>12345</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src=/step8up-week5-weather-app/contact.51c4405d.js></script>
+<script src=/step8up-week5-weather-app/profile.243fa0ec.js></script>
+
+

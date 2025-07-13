@@ -1,2 +1,0 @@
-document.addEventListener("DOMContentLoaded",e=>{let t=document.getElementById("current-date-time");function n(){let e=new Date,n=e.toLocaleDateString("en-GB",{month:"long",day:"numeric",year:"numeric"}),i=e.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",second:"2-digit",hour24:!0});t&&(t.textContent=`${n} | ${i}`)}n(),setInterval(n,1e3)});
-//# sourceMappingURL=contact.79b4988c.js.map
