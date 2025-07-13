@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>WeatherDashboard - Settings</title><link rel=icon type=image/png sizes=32x32 href=/step8up-week5-weather-app/favicon_32x32.b8b08889.png><link rel=icon type=image/x-icon href=/step8up-week5-weather-app/favicon.6f6f74ab.ico><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel=stylesheet><script src=https://cdn.tailwindcss.com></script><link rel=stylesheet href=/step8up-week5-weather-app/weather-dashboard.75e6dd40.css><body>
+<div class=dashboard-container>
+  <div class=glass-rectangle>
+    
+    <header class=dashboard-header>
+      <div class=header-left>
+        <h1 class=app-name>WeatherDash</h1>
+      </div>
+      <nav class=header-middle>
+        <ul>
+          <li><a href=/step8up-week5-weather-app/weather-dashboard.html aria-label=Home><i class="fa-home fas"></i></a></li>
+          <li><a href=/step8up-week5-weather-app/statistics.html aria-label=Statistics><i class="fa-chart-line fas"></i></a></li>
+          <li><a href=/step8up-week5-weather-app/notifications.html aria-label=Notifications><i class="fa-bell fas"></i></a></li>
+        </ul>
+      </nav>
+      <div class=header-right>
+        <span class=date-time id=current-date-time>Loading...</span>
+        <div class=user-menu>
+          <button class=user-profile-button type=button>
+            <img src=/step8up-week5-weather-app/user-avatar.d3abfc74.jpg alt="User Avatar" class=user-avatar>
+            <span class=user-info>
+              <span class=user-name>Kamil Wozniak</span>
+              <span class=user-role>Administrator</span>
+            </span>
+            <i class="arrow-down fa-chevron-down fas"></i>
+          </button>
+          <div class=dropdown-content>
+            <a href=/step8up-week5-weather-app/profile.html>Profile</a>
+            <a href=/step8up-week5-weather-app/settings.html>Settings</a>
+            <a href=#>Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <main class="main md:p-8 p-4 text-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-bold mb-8 text-3xl text-white">Settings</h2>
+
+        <form id=settings-form class=space-y-12>
+          
+          <section>
+            <h3 class="border-b border-white/20 font-semibold mb-6 pb-2 text-white text-xl">General Settings</h3>
+            <div class=space-y-6>
+              
+              <div>
+                <label for=default-location class="block font-medium mb-2 text-gray-300 text-sm">Default Location</label>
+                <div class="flex gap-4 items-center">
+                  <input id=default-location name=default-location placeholder="e.g., London" class="bg-black/20 border border-gray-600 focus:border-cyan-500 focus:ring-cyan-500 p-3 placeholder-gray-400 rounded-lg text-white transition w-full">
+                  <button type=button id=delete-location-btn title="Clear Default Location" class="bg-red-600/80 font-semibold hover:bg-red-700/80 px-4 py-3 rounded-lg text-white transition-colors">
+                    <i class="fa-trash fas"></i>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <input id=use-geolocation name=use-geolocation type=checkbox class="bg-black/20 border-gray-500 focus:ring-cyan-600 h-4 rounded text-cyan-500 w-4">
+                <label for=use-geolocation class="font-medium ml-3 text-gray-300 text-sm">Automatically use device location on startup</label>
+              </div>
+            </div>
+          </section>
+
+          
+          <section>
+            <h3 class="border-b border-white/20 font-semibold mb-6 pb-2 text-white text-xl">API Configuration</h3>
+            <div>
+              <label for=api-key class="block font-medium mb-2 text-gray-300 text-sm">OpenWeatherMap API Key</label>
+              <input type=password id=api-key name=api-key placeholder="Enter your personal API key" class="bg-black/20 border border-gray-600 focus:border-cyan-500 focus:ring-cyan-500 p-3 placeholder-gray-400 rounded-lg text-white transition w-full">
+              <p class="mt-2 text-gray-400 text-xs">Your API key is stored securely in your browser and is never sent to our servers.</p>
+            </div>
+          </section>
+
+          
+          <section class="border-t border-white/20 flex justify-end pt-8">
+            <button class="bg-cyan-600 font-semibold hover:bg-cyan-700 px-6 py-2 rounded-lg text-white transition-colors">
+              Save Settings
+            </button>
+          </section>
+        </form>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+<footer class=site-footer>
+  <div class=footer-content>
+    <p>© 2025 WeatherDash by Kamil Wozniak. All rights reserved.</p>
+    <nav class=footer-nav>
+      <ul>
+        <li><a href=/step8up-week5-weather-app/terms.html>Terms &amp; Conditions</a></li>
+        <li><a href=/step8up-week5-weather-app/privacy.html>Privacy Policy</a></li>
+        <li><a href=/step8up-week5-weather-app/contact.html>Contact Us</a></li>
+        <li><a href=/step8up-week5-weather-app/about.html>About Us</a></li>
+      </ul>
+    </nav>
+    <div class=visit-counter>
+      Visits: <span id=visitCount>12345</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src=/step8up-week5-weather-app/contact.51c4405d.js></script>
+<script src=/step8up-week5-weather-app/settings.470cee01.js></script>
+
+
