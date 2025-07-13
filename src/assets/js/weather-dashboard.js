@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
-  // --- Functions to open and close the modal ---
+  // Functions to open and close the modal
   const openModal = () => {
     if (modal) {
       modal.classList.remove('hidden');
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   });
 
-  // --- Form Submission Logic ---
+  // Form Submission Logic
   if (getWeatherButton) {
     getWeatherButton.addEventListener('click', () => {
       const cityName = cityInput.value.trim();
@@ -153,7 +153,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       glassRect.classList.add('rainy');
     }
   }
-
 
   let visitCount = localStorage.getItem('websiteVisitCount') || 0;
   visitCount++;
