@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WeatherDashboard - Kamil Wozniak</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon_32x32.png">
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -13,14 +14,16 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
   <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-<div class="dashboard-container cloudy">
-  <div class="glass-rectangle cloudy">
+<div class="dashboard-container partly-cloudy">
+  <div class="glass-rectangle partly-cloudy">
     <header class="dashboard-header">
       <div class="header-left">
         <h1 class="app-name">WeatherDash</h1>
@@ -34,7 +37,7 @@
         </ul>
       </nav>
       <div class="header-right">
-        <span class="date-time" id="currentDateTime">July 11, 2025 | 14:40 PM</span>
+        <span class="date-time" id="current-date-time">July 11, 2025 | 14:40 PM</span>
         <div class="user-menu">
           <button class="user-profile-button" type="button">
             <img src="./assets/images/user-avatar.jpg" alt="User Avatar" class="user-avatar">
@@ -117,8 +120,8 @@
       <ul>
         <li><a href="#">Terms &amp; Conditions</a></li>
         <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="./about.html">About Us</a></li>
       </ul>
     </nav>
     <div class="visit-counter">
@@ -127,7 +130,8 @@
   </div>
 </footer>
 
-<div id="search-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+<div id="search-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50"
+     role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <!-- Modal content -->
   <div id="modal-panel" class="w-full max-w-md transform rounded-lg bg-white p-6 shadow-xl transition-all">
     <!-- Modal Header -->
@@ -135,7 +139,8 @@
       <h3 class="text-lg font-semibold leading-6 text-gray-900" id="modal-title">
         Your Location
       </h3>
-      <button type="button" id="modal-close-button" class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+      <button type="button" id="modal-close-button"
+              class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
         <span class="sr-only">Close</span>
         <i class="fas fa-times h-6 w-6" aria-hidden="true"></i>
       </button>
@@ -145,22 +150,27 @@
     <div class="mt-4">
       <label for="city-input" class="block text-sm font-medium text-gray-700">City Name</label>
       <div class="mt-1">
-        <input type="text" name="city" id="city-input" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="e.g., London">
+        <input type="text" name="city" id="city-input"
+               class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+               placeholder="e.g., London">
       </div>
     </div>
 
     <!-- Modal Footer -->
     <div class="mt-5 sm:mt-6 sm:flex sm:flex-row-reverse sm:gap-3">
-      <button type="button" id="get-weather-button" class="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto sm:text-sm">
+      <button type="button" id="get-weather-button"
+              class="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto sm:text-sm">
         Check Weather
       </button>
-      <button type="button" id="modal-cancel-button" class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm">
+      <button type="button" id="modal-cancel-button"
+              class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm">
         Cancel
       </button>
     </div>
   </div>
 </div>
 
+<script src="./assets/js/clock.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
