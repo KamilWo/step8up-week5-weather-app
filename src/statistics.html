@@ -3,22 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WeatherDashboard - About Us</title>
+  <title>WeatherDash - Statistics</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon_32x32.png">
   <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -36,7 +34,7 @@
         </ul>
       </nav>
       <div class="header-right">
-        <span class="date-time" id="current-date-time">July 11, 2025 | 14:40 PM</span>
+        <span class="date-time" id="current-date-time">Loading...</span>
         <div class="user-menu">
           <button class="user-profile-button" type="button">
             <img src="./assets/images/user-avatar.jpg" alt="User Avatar" class="user-avatar">
@@ -55,26 +53,47 @@
       </div>
     </header>
 
-    <main class="main text-white">
-      <section class="about-content max-w-4xl mx-auto p-8 text-white/90">
-        <h2 class="text-3xl font-bold text-white mb-4">Our Mission</h2>
-        <p class="leading-relaxed mb-8">
-          The Weather App aims to provide accurate and timely weather information to users worldwide. We believe that
-          everyone should have access to reliable weather forecasts to plan their day effectively and stay safe.
-        </p>
+    <main class="main p-4 md:p-8 text-white">
+      <!-- Grid container for the charts -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <h2 class="text-3xl font-bold text-white mb-4">Technology Used</h2>
-        <p class="leading-relaxed mb-8">
-          This application is built using modern web technologies including HTML, CSS, and JavaScript. We leverage
-          powerful weather APIs to fetch real-time data and present it in an intuitive and user-friendly interface.
-        </p>
+        <!-- Chart 1: Temperature Changes -->
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4">Temperature (°C) - Next 5 Days</h3>
+          <canvas id="temperatureChart"></canvas>
+        </div>
 
-        <h2 class="text-3xl font-bold text-white mb-4">Contact Us</h2>
-        <p class="leading-relaxed">
-          If you have any questions or feedback, please feel free to reach out to us at <a
-          href="mailto:info@weatherapp.com" class="text-cyan-300 hover:underline font-semibold">info@weatherapp.com</a>.
-        </p>
-      </section>
+        <!-- Chart 2: Wind Speed Changes -->
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4">Wind Speed (km/h)</h3>
+          <canvas id="windChart"></canvas>
+        </div>
+
+        <!-- Chart 3: Precipitation Probability -->
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4">Precipitation Probability (%)</h3>
+          <canvas id="precipitationChart"></canvas>
+        </div>
+
+        <!-- Chart 4: Moon Phase -->
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4">Moon Phase (Illumination)</h3>
+          <canvas id="moonPhaseChart"></canvas>
+        </div>
+
+        <!-- Chart 5: Air Pressure -->
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4">Air Pressure (hPa)</h3>
+          <canvas id="pressureChart"></canvas>
+        </div>
+
+        <!-- Chart 6: Humidity -->
+        <div class="bg-black/20 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4">Humidity (%)</h3>
+          <canvas id="humidityChart"></canvas>
+        </div>
+
+      </div>
     </main>
   </div>
 </div>
@@ -97,5 +116,6 @@
 </footer>
 
 <script src="./assets/js/clock.js"></script>
+<script src="./assets/js/statistics.js"></script>
 </body>
 </html>
