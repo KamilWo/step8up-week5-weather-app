@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WeatherDashboard - Contact Us</title>
+  <title>WeatherDashboard - Settings</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon_32x32.png">
   <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
   <!-- Normalize -->
@@ -26,6 +26,7 @@
 <body>
 <div class="dashboard-container">
   <div class="glass-rectangle">
+    <!-- Header -->
     <header class="dashboard-header">
       <div class="header-left">
         <h1 class="app-name">WeatherDash</h1>
@@ -38,7 +39,7 @@
         </ul>
       </nav>
       <div class="header-right">
-        <span class="date-time" id="current-date-time">🕑</span>
+        <span class="date-time" id="current-date-time">Loading...</span>
         <div class="user-menu">
           <button class="user-profile-button" type="button">
             <img src="./assets/images/user-avatar.jpg" alt="User Avatar" class="user-avatar">
@@ -57,59 +58,62 @@
       </div>
     </header>
 
-    <main class="main p-8 text-white">
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+    <!-- Main Content -->
+    <main class="main p-4 md:p-8 text-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-8">Settings</h2>
 
-        <!-- Column 1: Contact Form -->
-        <section class="contact-form">
-          <h2 class="text-3xl font-bold text-white mb-6">Send us a message</h2>
-          <form action="#" method="post" class="space-y-6">
+        <form id="settings-form" class="space-y-12">
+          <!-- General Settings Section -->
+          <section>
+            <h3 class="text-xl font-semibold text-white mb-6 border-b border-white/20 pb-2">General Settings</h3>
+            <div class="space-y-6">
+              <!-- Default Location -->
+              <div>
+                <label for="default-location" class="block mb-2 text-sm font-medium text-gray-300">Default Location</label>
+                <div class="flex items-center gap-4">
+                  <input type="text" id="default-location" name="default-location" placeholder="e.g., London"
+                         class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
+                  <button type="button" id="delete-location-btn" title="Clear Default Location"
+                          class="px-4 py-3 bg-red-600/80 text-white font-semibold rounded-lg hover:bg-red-700/80 transition-colors">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- Geolocation Toggle -->
+              <div class="flex items-center">
+                <input id="use-geolocation" name="use-geolocation" type="checkbox"
+                       class="h-4 w-4 rounded border-gray-500 bg-black/20 text-cyan-500 focus:ring-cyan-600">
+                <label for="use-geolocation" class="ml-3 text-sm font-medium text-gray-300">Automatically use device location on startup</label>
+              </div>
+            </div>
+          </section>
+
+          <!-- API Configuration Section -->
+          <section>
+            <h3 class="text-xl font-semibold text-white mb-6 border-b border-white/20 pb-2">API Configuration</h3>
             <div>
-              <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Your Name</label>
-              <input type="text" id="name" name="name" required
+              <label for="api-key" class="block mb-2 text-sm font-medium text-gray-300">OpenWeatherMap API Key</label>
+              <input type="password" id="api-key" name="api-key" placeholder="Enter your personal API key"
                      class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
+              <p class="text-xs text-gray-400 mt-2">Your API key is stored securely in your browser and is never sent to our servers.</p>
             </div>
-            <div>
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Your Email</label>
-              <input type="email" id="email" name="email" required
-                     class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
-            </div>
-            <div>
-              <label for="message" class="block mb-2 text-sm font-medium text-gray-300">Your Message</label>
-              <textarea id="message" name="message" rows="5" required
-                        class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition"></textarea>
-            </div>
+          </section>
+
+          <!-- Form Actions -->
+          <section class="border-t border-white/20 pt-8 flex justify-end">
             <button type="submit"
-                    class="w-full px-5 py-3 text-base font-medium text-center text-white bg-cyan-600 rounded-lg hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-500/50 transition">
-              Send Message
+                    class="px-6 py-2 bg-cyan-600 text-white font-semibold rounded-lg hover:bg-cyan-700 transition-colors">
+              Save Settings
             </button>
-          </form>
-        </section>
-
-        <!-- Column 2: Contact Information -->
-        <section class="contact-info">
-          <h2 class="text-3xl font-bold text-white mb-6">Our Information</h2>
-          <div class="space-y-4 text-gray-200 leading-relaxed">
-            <p>
-              <strong class="font-semibold text-white">Address:</strong><br>
-              123 Weather Lane, Cloud City, WC 45678
-            </p>
-            <p>
-              <strong class="font-semibold text-white">Phone:</strong><br>
-              (123) 456-7890
-            </p>
-            <p>
-              <strong class="font-semibold text-white">Email:</strong><br>
-              <a href="mailto:info@weatherapp.com" class="text-cyan-300 hover:underline">info@weatherapp.com</a>
-            </p>
-          </div>
-        </section>
-
+          </section>
+        </form>
       </div>
     </main>
   </div>
 </div>
 
+<!-- Footer -->
 <footer class="site-footer">
   <div class="footer-content">
     <p>&copy; 2025 WeatherDash by Kamil Wozniak. All rights reserved.</p>
@@ -122,12 +126,13 @@
       </ul>
     </nav>
     <div class="visit-counter">
-      <p>Visits: <span id="visitCount">12345</span></p>
+      Visits: <span id="visitCount">12345</span>
     </div>
   </div>
 </footer>
 
 <!-- Scripts -->
 <script src="./assets/js/script.js"></script>
+<script src="./assets/js/settings.js"></script>
 </body>
 </html>
