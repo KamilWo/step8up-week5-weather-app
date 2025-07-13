@@ -1,5 +1,6 @@
 /* General Styling */
 @import url("partials/_variables.css");
 @import url("partials/_base.css");
+@import url("partials/_notifications.css");
 @import url("partials/_media.css");
 @import url("partials/_animations.css");

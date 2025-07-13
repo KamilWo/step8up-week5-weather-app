@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherDash - Notifications</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon_32x32.png">
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+  <!-- Normalize, Fonts, and Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Tailwind & Custom CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<div class="dashboard-container">
+  <div class="glass-rectangle">
+    <!-- Header -->
+    <header class="dashboard-header">
+      <div class="header-left">
+        <h1 class="app-name">WeatherDash</h1>
+      </div>
+      <nav class="header-middle">
+        <ul>
+          <li><a href="./weather-dashboard.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
+          <li><a href="./statistics.html" aria-label="Statistics"><i class="fas fa-chart-line"></i></a></li>
+          <li><a href="./notifications.html" aria-label="Notifications"><i class="fas fa-bell"></i></a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <span class="date-time" id="current-date-time">Loading...</span>
+        <div class="user-menu">
+          <button class="user-profile-button" type="button">
+            <img src="./assets/images/user-avatar.jpg" alt="User Avatar" class="user-avatar">
+            <span class="user-info">
+              <span class="user-name">Kamil Wozniak</span>
+              <span class="user-role">Administrator</span>
+            </span>
+            <i class="fas fa-chevron-down arrow-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main p-4 md:p-8 text-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-6">Notifications</h2>
+
+        <!-- Notifications List -->
+        <div id="notifications-list" class="space-y-4">
+
+          <div class="notification-item flex items-start gap-4 bg-black/20 p-4 rounded-lg border-l-4 border-red-500">
+            <div class="text-red-400 text-2xl mt-1">
+              <i class="fas fa-triangle-exclamation"></i>
+            </div>
+            <div class="flex-grow">
+              <h3 class="font-bold text-white">Severe Weather Alert</h3>
+              <p class="text-gray-300 text-sm">A thunderstorm warning has been issued for your area. Expected to start
+                at 16:00.</p>
+            </div>
+            <button class="dismiss-btn text-gray-400 hover:text-white transition-colors"
+                    aria-label="Dismiss notification">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <div class="notification-item flex items-start gap-4 bg-black/20 p-4 rounded-lg border-l-4 border-blue-500">
+            <div class="text-blue-400 text-2xl mt-1">
+              <i class="fas fa-cloud-showers-heavy"></i>
+            </div>
+            <div class="flex-grow">
+              <h3 class="font-bold text-white">Rain Starting Soon</h3>
+              <p class="text-gray-300 text-sm">Light rain is expected in the next 30 minutes. Remember about your
+                umbrella!</p>
+            </div>
+            <button class="dismiss-btn text-gray-400 hover:text-white transition-colors"
+                    aria-label="Dismiss notification">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <div class="notification-item flex items-start gap-4 bg-black/20 p-4 rounded-lg border-l-4 border-green-500">
+            <div class="text-green-400 text-2xl mt-1">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="flex-grow">
+              <h3 class="font-bold text-white">New Feature Added!</h3>
+              <p class="text-gray-300 text-sm">Check out the new historical weather data charts in the Statistics
+                page.</p>
+            </div>
+            <button class="dismiss-btn text-gray-400 hover:text-white transition-colors"
+                    aria-label="Dismiss notification">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <div class="notification-item flex items-start gap-4 bg-black/20 p-4 rounded-lg border-l-4 border-yellow-500">
+            <div class="text-yellow-400 text-2xl mt-1">
+              <i class="fas fa-sun"></i>
+            </div>
+            <div class="flex-grow">
+              <h3 class="font-bold text-white">High UV Index Today</h3>
+              <p class="text-gray-300 text-sm">The UV index will be high between 11 AM and 3 PM. Remember to use
+                sunscreen.</p>
+            </div>
+            <button class="dismiss-btn text-gray-400 hover:text-white transition-colors"
+                    aria-label="Dismiss notification">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <div class="notification-item flex items-start gap-4 bg-black/20 p-4 rounded-lg border-l-4 border-purple-500">
+            <div class="text-purple-400 text-2xl mt-1">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="flex-grow">
+              <h3 class="font-bold text-white">New Location Saved</h3>
+              <p class="text-gray-300 text-sm">"New York" has been added to your saved locations.</p>
+            </div>
+            <button class="dismiss-btn text-gray-400 hover:text-white transition-colors"
+                    aria-label="Dismiss notification">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Clear All Button -->
+        <div class="mt-8 text-center">
+          <button id="clear-all-btn"
+                  class="px-6 py-2 bg-red-600/80 text-white font-semibold rounded-lg hover:bg-red-700/80 transition-colors">
+            Clear All Notifications
+          </button>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 WeatherDash by Kamil Wozniak. All rights reserved.</p>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="./terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="./privacy.html">Privacy Policy</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="./about.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="visit-counter">
+      Visits: <span id="visitCount">12345</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="./assets/js/clock.js"></script>
+<script src="./assets/js/notifications.js"></script>
+</body>
+</html>
