@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",()=>{let e=document.getElementById("notifications-list"),t=document.getElementById("clear-all-btn"),n=e=>{e.classList.add("fade-out"),e.addEventListener("animationend",()=>{e.remove()})};e&&e.addEventListener("click",e=>{let t=e.target.closest(".dismiss-btn");if(t){let e=t.closest(".notification-item");e&&n(e)}}),t&&e&&t.addEventListener("click",()=>{e.querySelectorAll(".notification-item").forEach(e=>{n(e)})})});
+//# sourceMappingURL=notifications.b1ba111b.js.map
