@@ -74,7 +74,11 @@ body {
   z-index: 1;
 }
 
-.dashboard-header,
+.dashboard-header {
+  position: relative;
+  z-index: 10;
+}
+
 .dashboard-main,
 .main,
 .forecast-section {
@@ -182,7 +186,6 @@ body {
   background-color: var(--dropdown-bg);
   min-width: var(--dropdown-min-width);
   box-shadow: var(--dropdown-box-shadow);
-  z-index: 20;
   border-radius: var(--border-radius-sm);
   right: 0;
   top: 100%;
@@ -384,4 +387,8 @@ body {
 
 .visit-counter {
   font-weight: bold;
+}
+
+#avatar-preview {
+  background-image: url('../../images/user-avatar.jpg');
 }

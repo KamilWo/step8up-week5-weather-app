@@ -64,100 +64,99 @@
         <h2 class="text-3xl font-bold text-white mb-8">User Profile</h2>
 
         <form id="profile-form" class="space-y-12">
-  <!-- Profile Information Section -->
-  <section>
-    <h3 class="text-xl font-semibold text-white mb-6 border-b border-white/20 pb-2">Profile Information</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-      <!-- Avatar Upload -->
-      <div class="md:col-span-1 flex flex-col items-center">
-        <div id="avatar-preview" class="relative w-32 h-32 rounded-full bg-black/30 mb-4 bg-cover bg-center"
-             style="background-image: url('./assets/images/user-avatar.jpg');">
-          <label for="avatar-upload"
-                 class="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm opacity-0 hover:opacity-100 rounded-full cursor-pointer transition-opacity">
-            <i class="fas fa-camera mr-2"></i> Change
-          </label>
-        </div>
-        <input type="file" id="avatar-upload" name="avatar" class="hidden" accept="image/*">
-      </div>
-      <!-- Name and Email Fields -->
-      <div class="md:col-span-2 space-y-4">
-        <div>
-          <label for="username" class="block mb-2 text-sm font-medium text-gray-300">User Name</label>
-          <input type="text" id="username" name="username" value="Kamil Wozniak"
-                 class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
-        </div>
-        <div>
-          <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Email Address</label>
-          <input type="email" id="email" name="email" value="kamil.wozniak@example.com"
-                 class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
-        </div>
-        <div>
-          <label for="email-confirm" class="block mb-2 text-sm font-medium text-gray-300">Confirm Email</label>
-          <input type="email" id="email-confirm" name="email-confirm" value="kamil.wozniak@example.com"
-                 class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
-        </div>
-      </div>
-    </div>
-  </section>
+          <!-- Profile Information Section -->
+          <section>
+            <h3 class="text-xl font-semibold text-white mb-6 border-b border-white/20 pb-2">Profile Information</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              <!-- Avatar Upload -->
+              <div class="md:col-span-1 flex flex-col items-center">
+                <div id="avatar-preview" class="relative w-32 h-32 rounded-full bg-black/30 mb-4 bg-cover bg-center">
+                  <label for="avatar-upload"
+                         class="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm opacity-0 hover:opacity-100 rounded-full cursor-pointer transition-opacity">
+                    <i class="fas fa-camera mr-2"></i> Change
+                  </label>
+                </div>
+                <input type="file" id="avatar-upload" name="avatar" class="hidden" accept="image/*">
+              </div>
+              <!-- Name and Email Fields -->
+              <div class="md:col-span-2 space-y-4">
+                <div>
+                  <label for="username" class="block mb-2 text-sm font-medium text-gray-300">User Name</label>
+                  <input type="text" id="username" name="username" value="Kamil Wozniak"
+                         class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
+                </div>
+                <div>
+                  <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Email Address</label>
+                  <input type="email" id="email" name="email" value="kamil.wozniak@example.com"
+                         class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
+                </div>
+                <div>
+                  <label for="email-confirm" class="block mb-2 text-sm font-medium text-gray-300">Confirm Email</label>
+                  <input type="email" id="email-confirm" name="email-confirm" value="kamil.wozniak@example.com"
+                         class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
+                </div>
+              </div>
+            </div>
+          </section>
 
-  <!-- Password Reset Section -->
-  <section>
-    <h3 class="text-xl font-semibold text-white mb-6 border-b border-white/20 pb-2">Change Password</h3>
-    <div class="space-y-4 max-w-md">
-      <div>
-        <label for="current-password" class="block mb-2 text-sm font-medium text-gray-300">Current
-          Password</label>
-        <input type="password" id="current-password" name="current-password"
-               class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition"
-               placeholder="••••••••">
-      </div>
-      <div>
-        <label for="new-password" class="block mb-2 text-sm font-medium text-gray-300">New Password</label>
-        <input type="password" id="new-password" name="new-password"
-               class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition"
-               placeholder="••••••••">
-      </div>
-      <div>
-        <label for="new-password-confirm" class="block mb-2 text-sm font-medium text-gray-300">Confirm New
-          Password</label>
-        <input type="password" id="new-password-confirm" name="new-password-confirm"
-               class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition"
-               placeholder="••••••••">
-      </div>
-    </div>
-  </section>
+          <!-- Password Reset Section -->
+          <section>
+            <h3 class="text-xl font-semibold text-white mb-6 border-b border-white/20 pb-2">Change Password</h3>
+            <div class="space-y-4 max-w-md">
+              <div>
+                <label for="current-password" class="block mb-2 text-sm font-medium text-gray-300">Current
+                  Password</label>
+                <input type="password" id="current-password" name="current-password"
+                       class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition"
+                       placeholder="••••••••">
+              </div>
+              <div>
+                <label for="new-password" class="block mb-2 text-sm font-medium text-gray-300">New Password</label>
+                <input type="password" id="new-password" name="new-password"
+                       class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition"
+                       placeholder="••••••••">
+              </div>
+              <div>
+                <label for="new-password-confirm" class="block mb-2 text-sm font-medium text-gray-300">Confirm New
+                  Password</label>
+                <input type="password" id="new-password-confirm" name="new-password-confirm"
+                       class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition"
+                       placeholder="••••••••">
+              </div>
+            </div>
+          </section>
 
-  <!-- Notifications Section -->
-  <section>
-    <h3 class="text-xl font-semibold text-white mb-4 border-b border-white/20 pb-2">Notifications</h3>
-    <div class="flex items-center">
-      <input id="email-notifications" name="email-notifications" type="checkbox" checked
-             class="h-4 w-4 rounded border-gray-500 bg-black/20 text-cyan-500 focus:ring-cyan-600">
-      <label for="email-notifications" class="ml-3 text-sm font-medium text-gray-300">Enable email notifications
-        for weather alerts</label>
-    </div>
-  </section>
+          <!-- Notifications Section -->
+          <section>
+            <h3 class="text-xl font-semibold text-white mb-4 border-b border-white/20 pb-2">Notifications</h3>
+            <div class="flex items-center">
+              <input id="email-notifications" name="email-notifications" type="checkbox" checked
+                     class="h-4 w-4 rounded border-gray-500 bg-black/20 text-cyan-500 focus:ring-cyan-600">
+              <label for="email-notifications" class="ml-3 text-sm font-medium text-gray-300">Enable email notifications
+                for weather alerts</label>
+            </div>
+          </section>
 
-  <!-- Form Actions -->
-  <section class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-    <div>
-      <button type="button" id="delete-account-btn"
-              class="px-6 py-2 bg-red-600/80 text-white font-semibold rounded-lg hover:bg-red-700/80 transition-colors">
-        Delete Account
-      </button>
-    </div>
-    <div class="flex gap-4">
-      <button type="button"
-              class="px-6 py-2 bg-gray-500/80 text-white font-semibold rounded-lg hover:bg-gray-600/80 transition-colors">
-        Cancel
-      </button>
-      <button type="submit"
-              class="px-6 py-2 bg-cyan-600 text-white font-semibold rounded-lg hover:bg-cyan-700 transition-colors">
-        Save Changes
-      </button>
-    </div>
-  </section>
-</form>
+          <!-- Form Actions -->
+          <section class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+              <button type="button" id="delete-account-btn"
+                      class="px-6 py-2 bg-red-600/80 text-white font-semibold rounded-lg hover:bg-red-700/80 transition-colors">
+                Delete Account
+              </button>
+            </div>
+            <div class="flex gap-4">
+              <button type="button"
+                      class="px-6 py-2 bg-gray-500/80 text-white font-semibold rounded-lg hover:bg-gray-600/80 transition-colors">
+                Cancel
+              </button>
+              <button type="submit"
+                      class="px-6 py-2 bg-cyan-600 text-white font-semibold rounded-lg hover:bg-cyan-700 transition-colors">
+                Save Changes
+              </button>
+            </div>
+          </section>
+        </form>
       </div>
     </main>
   </div>
