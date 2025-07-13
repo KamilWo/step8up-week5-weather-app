@@ -385,5 +385,5 @@ body {
 }
 
 .visit-counter {
-  margin-top: var(--spacing-sm);
+  font-weight: bold;
 }
