@@ -14,7 +14,7 @@ body {
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: var(--padding-container);
   position: relative;
 }
@@ -22,7 +22,7 @@ body {
 /* Glass Rectangle Effect */
 .glass-rectangle {
   width: 90vw;
-  height: 90vh;
+  min-height: 90vh;
   background: var(--glass-background);
   backdrop-filter: blur(var(--spacing-md));
   border-radius: var(--border-radius);
@@ -31,7 +31,6 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
 }
 
 /* Dynamic Backgrounds (to be applied via JavaScript) */
@@ -183,7 +182,7 @@ body {
   background-color: var(--dropdown-bg);
   min-width: var(--dropdown-min-width);
   box-shadow: var(--dropdown-box-shadow);
-  z-index: 10;
+  z-index: 20;
   border-radius: var(--border-radius-sm);
   right: 0;
   top: 100%;
@@ -203,8 +202,7 @@ body {
   background-color: var(--dropdown-hover-bg);
 }
 
-/* Show the dropdown menu on hover/click with JS */
-.user-menu:hover .dropdown-content,
+/* Show the dropdown menu on click with JS */
 .user-menu.active .dropdown-content {
   display: block;
 }
