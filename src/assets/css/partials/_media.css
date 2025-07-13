@@ -115,6 +115,7 @@
     flex-direction: column;
     gap: var(--spacing-sm);
     align-items: flex-end;
+    z-index: 2;
   }
 
   .dashboard-main {

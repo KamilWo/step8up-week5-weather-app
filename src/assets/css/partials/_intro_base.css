@@ -61,9 +61,8 @@ body {
   border-radius: var(--border-radius-sm);
   text-decoration: none;
   cursor: pointer;
-  transition:
-    background-color var(--transition-duration) var(--transition-timing),
-    color var(--transition-duration) var(--transition-timing);
+  transition: background-color var(--transition-duration) var(--transition-timing),
+  color var(--transition-duration) var(--transition-timing);
 }
 
 .btn-custom:hover,
