@@ -3,17 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WeatherDash - Notifications</title>
+  <title>WeatherDashboard - Notifications</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon_32x32.png">
   <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
-  <!-- Normalize, Fonts, and Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- Normalize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Tailwind & Custom CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -43,7 +50,7 @@
             <i class="fas fa-chevron-down arrow-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#">Profile</a>
+            <a href="./profile.html">Profile</a>
             <a href="#">Settings</a>
             <a href="#">Logout</a>
           </div>
@@ -69,7 +76,7 @@
                 at 16:00.</p>
             </div>
             <button class="dismiss-btn text-gray-400 hover:text-white transition-colors"
-                    aria-label="Dismiss notification">
+                    aria-label="Dismiss notification" type="button">
               <i class="fas fa-times"></i>
             </button>
           </div>
@@ -84,7 +91,7 @@
                 umbrella!</p>
             </div>
             <button class="dismiss-btn text-gray-400 hover:text-white transition-colors"
-                    aria-label="Dismiss notification">
+                    aria-label="Dismiss notification" type="button">
               <i class="fas fa-times"></i>
             </button>
           </div>
@@ -99,7 +106,7 @@
                 page.</p>
             </div>
             <button class="dismiss-btn text-gray-400 hover:text-white transition-colors"
-                    aria-label="Dismiss notification">
+                    aria-label="Dismiss notification" type="button">
               <i class="fas fa-times"></i>
             </button>
           </div>
@@ -114,7 +121,7 @@
                 sunscreen.</p>
             </div>
             <button class="dismiss-btn text-gray-400 hover:text-white transition-colors"
-                    aria-label="Dismiss notification">
+                    aria-label="Dismiss notification" type="button">
               <i class="fas fa-times"></i>
             </button>
           </div>
@@ -128,7 +135,7 @@
               <p class="text-gray-300 text-sm">"New York" has been added to your saved locations.</p>
             </div>
             <button class="dismiss-btn text-gray-400 hover:text-white transition-colors"
-                    aria-label="Dismiss notification">
+                    aria-label="Dismiss notification" type="button">
               <i class="fas fa-times"></i>
             </button>
           </div>
@@ -138,7 +145,8 @@
         <!-- Clear All Button -->
         <div class="mt-8 text-center">
           <button id="clear-all-btn"
-                  class="px-6 py-2 bg-red-600/80 text-white font-semibold rounded-lg hover:bg-red-700/80 transition-colors">
+                  class="px-6 py-2 bg-red-600/80 text-white font-semibold rounded-lg hover:bg-red-700/80 transition-colors"
+                  type="button">
             Clear All Notifications
           </button>
         </div>
@@ -167,7 +175,7 @@
 </footer>
 
 <!-- Scripts -->
-<script src="./assets/js/clock.js"></script>
+<script src="./assets/js/script.js"></script>
 <script src="./assets/js/notifications.js"></script>
 </body>
 </html>
