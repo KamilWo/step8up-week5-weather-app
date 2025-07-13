@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WeatherDashboard - Contact Us</title>
+  <title>WeatherDash - Privacy Policy</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon_32x32.png">
   <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
   <!-- Normalize -->
@@ -11,9 +11,7 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
   <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,55 +54,37 @@
       </div>
     </header>
 
-    <main class="main p-8 text-white">
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+    <main class="main text-white">
+      <section class="about-content max-w-4xl mx-auto p-8 text-white/90">
+        <h2 class="text-3xl font-bold text-white mb-6">Privacy Policy</h2>
 
-        <!-- Column 1: Contact Form -->
-        <section class="contact-form">
-          <h2 class="text-3xl font-bold text-white mb-6">Send us a message</h2>
-          <form action="#" method="post" class="space-y-6">
-            <div>
-              <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Your Name</label>
-              <input type="text" id="name" name="name" required
-                     class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
-            </div>
-            <div>
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Your Email</label>
-              <input type="email" id="email" name="email" required
-                     class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
-            </div>
-            <div>
-              <label for="message" class="block mb-2 text-sm font-medium text-gray-300">Your Message</label>
-              <textarea id="message" name="message" rows="5" required
-                        class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition"></textarea>
-            </div>
-            <button type="submit"
-                    class="w-full px-5 py-3 text-base font-medium text-center text-white bg-cyan-600 rounded-lg hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-500/50 transition">
-              Send Message
-            </button>
-          </form>
-        </section>
+        <h3 class="text-xl font-semibold text-white mt-6 mb-2">1. Information We Collect</h3>
+        <p class="leading-relaxed mb-4">
+          We collect information to provide better services to all our users. This includes the city names you search
+          for, which we use to provide weather forecasts. We do not collect personally identifiable information like
+          your name or email address unless you voluntarily provide it through our contact form.
+        </p>
 
-        <!-- Column 2: Contact Information -->
-        <section class="contact-info">
-          <h2 class="text-3xl font-bold text-white mb-6">Our Information</h2>
-          <div class="space-y-4 text-gray-200 leading-relaxed">
-            <p>
-              <strong class="font-semibold text-white">Address:</strong><br>
-              123 Weather Lane, Cloud City, WC 45678
-            </p>
-            <p>
-              <strong class="font-semibold text-white">Phone:</strong><br>
-              (123) 456-7890
-            </p>
-            <p>
-              <strong class="font-semibold text-white">Email:</strong><br>
-              <a href="mailto:info@weatherapp.com" class="text-cyan-300 hover:underline">info@weatherapp.com</a>
-            </p>
-          </div>
-        </section>
+        <h3 class="text-xl font-semibold text-white mt-6 mb-2">2. How We Use Information</h3>
+        <p class="leading-relaxed mb-4">
+          The information we collect is used solely to operate, maintain, and provide you with the features and
+          functionality of the Service. Search history may be stored locally on your device to improve your experience.
+        </p>
 
-      </div>
+        <h3 class="text-xl font-semibold text-white mt-6 mb-2">3. Third-Party Services</h3>
+        <p class="leading-relaxed mb-4">
+          We use third-party APIs (like OpenWeatherMap) to provide weather data. These services have their own privacy
+          policies, and we encourage you to review them. We are not responsible for the privacy practices of these third
+          parties.
+        </p>
+
+        <h3 class="text-xl font-semibold text-white mt-6 mb-2">4. Data Security</h3>
+        <p class="leading-relaxed">
+          We are committed to protecting your information. We implement a variety of security measures to maintain the
+          safety of your data when you use our Service. However, no method of transmission over the Internet is 100%
+          secure.
+        </p>
+      </section>
     </main>
   </div>
 </div>
@@ -125,6 +105,7 @@
     </div>
   </div>
 </footer>
-<script src="./assets/js/clock.js"></script>
+
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
