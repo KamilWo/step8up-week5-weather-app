@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherDashboard - Contact Us</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon_32x32.png">
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<div class="dashboard-container">
+  <div class="glass-rectangle">
+    <header class="dashboard-header">
+      <div class="header-left">
+        <h1 class="app-name">WeatherDash</h1>
+      </div>
+      <nav class="header-middle">
+        <ul>
+          <li><a href="./weather-dashboard.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
+          <li><a href="#" aria-label="Notifications"><i class="fas fa-bell"></i></a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <span class="date-time" id="current-date-time">July 11, 2025 | 14:40 PM</span>
+        <div class="user-menu">
+          <button class="user-profile-button" type="button">
+            <img src="./assets/images/user-avatar.jpg" alt="User Avatar" class="user-avatar">
+            <span class="user-info">
+              <span class="user-name">John Doe</span>
+              <span class="user-role">Administrator</span>
+            </span>
+            <i class="fas fa-chevron-down arrow-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main p-8 text-white">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+
+        <!-- Column 1: Contact Form -->
+        <section class="contact-form">
+          <h2 class="text-3xl font-bold text-white mb-6">Send us a message</h2>
+          <form action="#" method="post" class="space-y-6">
+            <div>
+              <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Your Name</label>
+              <input type="text" id="name" name="name" required
+                     class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
+            </div>
+            <div>
+              <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Your Email</label>
+              <input type="email" id="email" name="email" required
+                     class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition">
+            </div>
+            <div>
+              <label for="message" class="block mb-2 text-sm font-medium text-gray-300">Your Message</label>
+              <textarea id="message" name="message" rows="5" required
+                        class="w-full p-3 bg-black/20 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-cyan-500 focus:border-cyan-500 transition"></textarea>
+            </div>
+            <button type="submit"
+                    class="w-full px-5 py-3 text-base font-medium text-center text-white bg-cyan-600 rounded-lg hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-500/50 transition">
+              Send Message
+            </button>
+          </form>
+        </section>
+
+        <!-- Column 2: Contact Information -->
+        <section class="contact-info">
+          <h2 class="text-3xl font-bold text-white mb-6">Our Information</h2>
+          <div class="space-y-4 text-gray-200 leading-relaxed">
+            <p>
+              <strong class="font-semibold text-white">Address:</strong><br>
+              123 Weather Lane, Cloud City, WC 45678
+            </p>
+            <p>
+              <strong class="font-semibold text-white">Phone:</strong><br>
+              (123) 456-7890
+            </p>
+            <p>
+              <strong class="font-semibold text-white">Email:</strong><br>
+              <a href="mailto:info@weatherapp.com" class="text-cyan-300 hover:underline">info@weatherapp.com</a>
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 WeatherDash by Kamil Wozniak. All rights reserved.</p>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="./about.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="visit-counter">
+      <p>Visits: <span id="visitCount">12345</span></p>
+    </div>
+  </div>
+</footer>
+<script src="./assets/js/clock.js"></script>
+</body>
+</html>

@@ -12,6 +12,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const glassRect = document.querySelector('.glass-rectangle');
   const dashboardContainer = document.querySelector('.dashboard-container');
 
+  // Date and Time Display
+  const currentDateTimeElement = document.getElementById('current-date-time');
+
+  function updateDateTime() {
+    const now = new Date();
+
+    // Format the date: e.g., "July 12, 2025"
+    const dateOptions = {month: 'long', day: 'numeric', year: 'numeric'};
+    const formattedDate = now.toLocaleDateString('en-GB', dateOptions);
+
+    // Format the time: e.g., "03:30"
+    const timeOptions = {hour: '2-digit', minute: '2-digit', second: '2-digit', hour24: true};
+    const formattedTime = now.toLocaleTimeString('en-GB', timeOptions);
+
+    if (currentDateTimeElement) {
+      currentDateTimeElement.textContent = `${formattedDate} | ${formattedTime}`;
+    }
+  }
+
+  // Update the time immediately when the page loads
+  updateDateTime();
+  // Then, update the time every second (1000 milliseconds)
+  setInterval(updateDateTime, 1000);
+
+
   // --- Functions to open and close the modal ---
   const openModal = () => {
     if (modal) {
@@ -91,9 +116,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // Call getWeather API when the button is clicked
   const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
-  const currentDateTimeElement = document.getElementById('currentDateTime');
-  if (currentDateTimeElement) {}
-
   function updateBackground(weatherCondition) {
 
     glassRect.classList.remove('sunny', 'cloudy', 'partly-cloudy', 'rainy', 'snowy', 'night-sky', 'night-rainy-sky', 'night-cloudy-sky');
@@ -105,7 +127,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       glassRect.classList.add('rainy');
     }
   }
-
 
 
   let visitCount = localStorage.getItem('websiteVisitCount') || 0;
