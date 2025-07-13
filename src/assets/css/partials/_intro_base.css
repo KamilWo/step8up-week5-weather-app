@@ -46,7 +46,7 @@ body {
   animation: scaleIn 1s ease-out forwards;
 }
 
-/* Utility & Button Styles */
+/* Utility and Button Styles */
 .text-blue-600 {
   color: var(--color-primary);
 }
