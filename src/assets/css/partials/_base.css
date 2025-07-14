@@ -23,7 +23,7 @@ body {
 .glass-rectangle {
   width: 90vw;
   height: auto;
-  min-height: fit-content;
+  min-height: 90vh;
   background: var(--glass-background);
   backdrop-filter: blur(var(--spacing-md));
   border-radius: var(--border-radius);
@@ -51,7 +51,7 @@ body {
 
 .glass-rectangle.partly-cloudy,
 .dashboard-container.partly-cloudy{
-  background-image: url("../../images/backgrounds/partly-cloudy-bg.jpg");
+  background-image: url("../../images/backgrounds/partly-cloudy-bg.png");
   background-size: cover;
   background-position: center;
 }
